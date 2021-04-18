@@ -4,6 +4,7 @@ logging:
     org.springframework.jndi: warn
 
 server:
+  port: 8002
   compression:
     enabled: true
     mime-types: application/json,text/css,text/html
