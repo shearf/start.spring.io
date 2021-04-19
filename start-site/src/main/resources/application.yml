@@ -155,6 +155,12 @@ initializr:
             version: 2.0.2
           - compatibilityRange: "2.4.0-M1"
             version: 2.1.0
+    maven:
+      parent:
+        groupId: com.shearf.cloud
+        artifactId: common-dependences
+        version: 0.0.1-SNAPSHOT
+        includeSpringBootBom: false
     gradle:
       dependency-management-plugin-version: 1.0.11.RELEASE
     kotlin:
@@ -1577,27 +1583,13 @@ initializr:
     - name: Jar
       id: jar
       default: true
-    - name: War
-      id: war
-      default: false
   javaVersions:
-    - id: 16
-      default: false
     - id: 11
       default: true
-    - id: 1.8
-      name: 8
-      default: false
   languages:
     - name: Java
       id: java
       default: true
-    - name: Kotlin
-      id: kotlin
-      default: false
-    - name: Groovy
-      id: groovy
-      default: false
   bootVersions:
     - name : Latest SNAPSHOT
       id: 2.2.0.BUILD-SNAPSHOT
@@ -1605,6 +1597,10 @@ initializr:
     - name : 2.1.1.
       id: 2.1.1.RELEASE
       default: true
+  group-id:
+    value: com.shearf.cloud
+  artifact-id:
+    value: my-app
 
 ---
 
